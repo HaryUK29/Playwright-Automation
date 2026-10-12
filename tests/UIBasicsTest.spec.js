@@ -1,25 +1,25 @@
-const {test, expect} = require('@playwright/test');
+// const {test, expect} = require('@playwright/test');
 
-test('Browser Playwright Test', async ({browser})=> 
-{
-    //chrome - plugins/cookies
-    const context = await browser.newContext();
-    const page = await context.newPage();
-    await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
-    console.log(await page.title());
-    //css  type, fill
-    await page.locator("[name='username']").fill("learning");
-    await page.locator("#password").fill('test123');
-    await page.locator("#signInBtn").click();
-    console.log(await page.locator("[style*='block']").textContent());
-    await expect(await page.locator("[style*='block']")).toContainText('Incorrect');
-
-});
-
-// test('Page Playwright Test', async ({page})=> 
+// test('Browser Playwright Test', async ({browser})=> 
 // {
-//     await page.goto("https://google.com");
-//     await expect(page).toHaveTitle("Google");
+//     //chrome - plugins/cookies
+//     const context = await browser.newContext();
+//     const page = await context.newPage();
+//     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
 //     console.log(await page.title());
-  
+//     //css  type, fill
+//     await page.locator("[name='username']").fill("learning");
+//     await page.locator("#password").fill('test123');
+//     await page.locator("#signInBtn").click();
+//     console.log(await page.locator("[style*='block']").textContent());
+//     await expect(await page.locator("[style*='block']")).toContainText('Incorrect');
+
 // });
+
+// // test('Page Playwright Test', async ({page})=> 
+// // {
+// //     await page.goto("https://google.com");
+// //     await expect(page).toHaveTitle("Google");
+// //     console.log(await page.title());
+  
+// // });
